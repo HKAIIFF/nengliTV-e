@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nengli Limited - AI-Native Content Marketing Pioneer | nengli.tv</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff6b35;
+            --secondary: #f7931e;
+            --accent: #ffd23f;
+            --gold: #ffd700;
+            --blue: #3498db;
+            --purple: #8e44ad;
+            --dark: #0a0a0a;
+            --card-bg: rgba(26, 32, 44, 0.7);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: #ffffff;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(247, 147, 30, 0.15) 0%, transparent 20%);
+        }
+        
+        /* Advanced Logo Design */
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            margin-right: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .logo-icon:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+        }
+        
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--accent), var(--secondary));
+            border-radius: 14px;
+            z-index: -1;
+            opacity: 0.7;
+            animation: logoGlow 3s ease-in-out infinite alternate;
+        }
+        
+        .logo-symbol {
+            font-size: 24px;
+            font-weight: 900;
+            color: #000;
+            text-shadow: none;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+        
+        .logo-main {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            margin-bottom: 2px;
+        }
+        
+        .logo-sub {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: 0.9;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        @keyframes logoGlow {
+            0% { opacity: 0.5; transform: scale(1); }
+            100% { opacity: 0.8; transform: scale(1.02); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 107, 53, 0.2);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+        
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            border: none;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.4);
+            color: white;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), #ffed4e);
+            color: #000;
+            transition: all 0.3s ease;
+            border: none;
+            font-weight: 600;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
+            color: #000;
+        }
+        
+        .hero {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        
+        .hero:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+            animation: bgPan 30s infinite linear;
+        }
+        
+        @keyframes bgPan {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: sparkle 2s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+            100% { opacity: 0; transform: scale(0) rotate(360deg); }
+        }
+        
+        .data-stream {
+            position: absolute;
+            height: 100px;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--primary), var(--secondary), transparent);
+            z-index: 0;
+            animation: dataStream 2s linear infinite;
+            opacity: 0.3;
+        }
+        
+        @keyframes dataStream {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+        
+        .service-card {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+        }
+        
+        .icon-large {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .status-card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.1);
+        }
+        
+        .status-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .price-card {
+            background: var(--card-bg);
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .price-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.2);
+        }
+        
+        .price-card.featured {
+            border-color: var(--gold);
+            background: rgba(26, 32, 44, 0.95);
+        }
+        
+        .price-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--gold);
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 0 14px 0 14px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .case-visual {
+            position: relative;
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .case-visual:hover {
+            transform: translateY(-10px);
+        }
+        
+        .case-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        }
+        
+        .timeline-container {
+            position: relative;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 4px solid var(--dark);
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        .timeline-left {
+            margin-left: 0;
+        }
+        
+        .timeline-right {
+            margin-left: 55%;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #ffffff;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .newsletter-section input, .newsletter-section select {
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 80vh;
+                padding-top: 70px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem !important;
+                margin-top: 20px;
+            }
+            
+            .navbar {
+                padding: 0.5rem 1rem;
+            }
+            
+            .logo-main {
+                font-size: 20px;
+            }
+            
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                margin-right: 8px;
+            }
+            
+            .logo-symbol {
+                font-size: 18px;
+            }
+            
+            .timeline-item::before {
+                left: 20px;
+            }
+            
+            .timeline-container::before {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            
+            .timeline-right {
+                margin-left: 60px;
+            }
+            
+            .btn-primary, .btn-gold {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .card, .service-card {
+                padding: 1rem;
+            }
+            
+            .mobile-menu-button {
+                display: block !important;
+            }
+            
+            .mobile-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.98);
+                z-index: 999;
+                padding: 1rem;
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+            }
+            
+            .mobile-menu.active {
+                transform: translateY(0);
+            }
+            
+            .mobile-menu a {
+                display: block;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+        }
+        
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 107, 53, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .contact-item .icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        /* Enhanced Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+    </style>
+</head>
+<body>
+    <!-- Data streams -->
+    <div class="data-stream" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="data-stream" style="left: 40%; animation-delay: 0.5s;"></div>
+    <div class="data-stream" style="left: 60%; animation-delay: 1s;"></div>
+    <div class="data-stream" style="left: 80%; animation-delay: 1.5s;"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="logo-container">
+                <div class="logo-icon">
+                    <span class="logo-symbol">N</span>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">NENGLI</div>
+                    <div class="logo-sub">LIMITED</div>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-orange-400 transition font-medium">Services</a>
+                <a href="#advantages" class="hover:text-orange-400 transition font-medium">Advantages</a>
+                <a href="#cases" class="hover:text-orange-400 transition font-medium">Case Studies</a>
+                <a href="#pricing" class="hover:text-orange-400 transition font-medium">Pricing</a>
+                <a href="#about" class="hover:text-orange-400 transition font-medium">About</a>
+                <a href="#contact" class="hover:text-orange-400 transition font-medium">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="btn-gold px-6 py-2 rounded-full text-sm font-bold">Free Consultation</a>
+                <a href="#pricing" class="btn-primary px-6 py-2 rounded-full text-sm">Get Started</a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden" id="mobileMenu">
+            <a href="#services" class="hover:text-orange-400 transition">Services</a>
+            <a href="#advantages" class="hover:text-orange-400 transition">Advantages</a>
+            <a href="#cases" class="hover:text-orange-400 transition">Case Studies</a>
+            <a href="#pricing" class="hover:text-orange-400 transition">Pricing</a>
+            <a href="#about" class="hover:text-orange-400 transition">About</a>
+            <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+        
+        <!-- Floating sparkles -->
+        <div class="sparkle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 30%; right: 15%; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="bottom: 40%; left: 20%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 60%; right: 25%; animation-delay: 1.5s;"></div>
+        
+        <div class="container mx-auto px-4 hero-content">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="mb-8">
+                    <h1 class="text-5xl md:text-8xl font-bold mb-4 gradient-text">
+                        Limited Capability, Unlimited Future
+                    </h1>
+                    <p class="text-xl md:text-3xl text-gray-300 mb-2">
+                        AI-Native Content Marketing Pioneer
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-400">
+                        Reimagining Content Marketing with AI • Empowering Brands with Superhuman Creative Power
+                    </p>
+                </div>
+                
+                <!-- Status information cards -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="status-card text-center">
+                        <i class="fas fa-robot"></i>
+                        <h3 class="text-xl font-bold mb-2">AI-Native Technology</h3>
+                        <p class="text-gray-300">Deep fusion of traditional expertise<br>with AI technology</p>
+                    </div>
+                    <div class="status-card text-center">
+                        <i class="fas fa-trophy"></i>
+                        <h3 class="text-xl font-bold mb-2">Industry Achievement</h3>
+                        <p class="text-gray-300">15+ years of experience<br>300+ successful brands</p>
+                    </div>
+                    <div class="status-card text-center">
+                        <i class="fas fa-rocket"></i>
+                        <h3 class="text-xl font-bold mb-2">Efficiency Revolution</h3>
+                        <p class="text-gray-300">10x efficiency improvement<br>60-70% cost reduction</p>
+                    </div>
+                </div>
+
+                <!-- Key Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-black bg-opacity-50 rounded-lg p-4">
+                        <div class="text-2xl md:text-3xl font-bold text-orange-400">15+</div>
+                        <div class="text-sm text-gray-400">Years Experience</div>
+                    </div>
+                    <div class="bg-black bg-opacity-50 rounded-lg p-4">
+                        <div class="text-2xl md:text-3xl font-bold text-orange-400">300+</div>
+                        <div class="text-sm text-gray-400">Brands Served</div>
+                    </div>
+                    <div class="bg-black bg-opacity-50 rounded-lg p-4">
+                        <div class="text-2xl md:text-3xl font-bold text-orange-400">500M+</div>
+                        <div class="text-sm text-gray-400">Content Views</div>
+                    </div>
+                    <div class="bg-black bg-opacity-50 rounded-lg p-4">
+                        <div class="text-2xl md:text-3xl font-bold text-orange-400">85%</div>
+                        <div class="text-sm text-gray-400">Success Rate</div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
+                    <a href="#contact" class="btn-gold px-8 py-4 rounded-full text-lg font-bold">
+                        <i class="fas fa-comments mr-2"></i>Free Consultation
+                    </a>
+                    <a href="#services" class="btn-primary px-8 py-4 rounded-full text-lg font-bold">
+                        <i class="fas fa-rocket mr-2"></i>Explore Services
+                    </a>
+                    <a href="#cases" class="bg-transparent border-2 border-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-black transition">
+                        <i class="fas fa-star mr-2"></i>Case Studies
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Service Portfolio</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Three core product lines providing specialized AI content marketing solutions for different client needs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Smart Content Factory -->
+                <div class="service-card p-8 text-center">
+                    <div class="icon-large text-orange-400 floating">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-orange-400">Smart Content Factory</h3>
+                    <p class="text-lg mb-6 text-gray-300">AI-Driven Content Production Line</p>
+                    <p class="text-sm text-gray-300 mb-6">
+                        Making content creation as efficient, stable, and predictable as factory production. Full-process AI empowerment from creative ideation to content creation.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6 text-left">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>AI Creative Workshop - Unlimited ideation</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Smart Video Production - Automated editing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Smart Design Center - Batch production</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Content Asset Library - Massive resources</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-3xl font-bold text-orange-400 mb-4">From $1,450/month</div>
+                    <p class="text-xs text-gray-400 mb-4">10x efficiency, 70% cost reduction</p>
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold">Learn More</button>
+                </div>
+                
+                <!-- Omni-Channel Marketing Brain -->
+                <div class="service-card p-8 text-center">
+                    <div class="icon-large text-blue-400 floating" style="animation-delay: 0.5s;">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Omni-Channel Marketing Brain</h3>
+                    <p class="text-lg mb-6 text-gray-300">Intelligent Marketing Decision System</p>
+                    <p class="text-sm text-gray-300 mb-6">
+                        Making marketing decisions as precise, intelligent, and real-time optimized as navigation. Unified cross-platform marketing management with data-driven decisions.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6 text-left">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Smart Campaign Center - Cross-platform management</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Social Media Automation - 24/7 operations</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Private Domain System - Precision conversion</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Data Analytics Dashboard - Real-time optimization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-3xl font-bold text-blue-400 mb-4">From $4,400/month</div>
+                    <p class="text-xs text-gray-400 mb-4">100-200% ROI improvement</p>
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold">Learn More</button>
+                </div>
+                
+                <!-- Super IP Incubator -->
+                <div class="service-card p-8 text-center">
+                    <div class="icon-large text-yellow-400 floating" style="animation-delay: 1s;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">Super IP Incubator</h3>
+                    <p class="text-lg mb-6 text-gray-300">End-to-End IP Development Service</p>
+                    <p class="text-sm text-gray-300 mb-6">
+                        Enabling every brand to have its own super IP for long-term value growth. Complete incubation service from IP concept to commercialization.
+                    </p>
+                    
+                    <div class="space-y-3 mb-6 text-left">
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>IP Concept Workshop - Original IP design</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>Content Matrix Production - Multi-media content</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>IP Operations & Promotion - Cross-platform operations</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            <span>IP Commercialization - Licensing & monetization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-3xl font-bold text-yellow-400 mb-4">From $29,500/project</div>
+                    <p class="text-xs text-gray-400 mb-4">6-month complete incubation cycle</p>
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Advantages Section -->
+    <section id="advantages" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Core Competitive Advantages</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Deep native fusion of traditional professional capabilities with AI technology, creating unprecedented content marketing service experiences
+                </p>
+            </div>
+
+            <!-- Advantage Categories -->
+            <div class="mb-16">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4 text-orange-400"><i class="fas fa-users"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Traditional Professional Capabilities</h3>
+                        <p class="text-gray-400">15 years of industry expertise and deep professional experience</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4 text-blue-400"><i class="fas fa-microchip"></i></div>
+                        <h3 class="text-xl font-bold mb-2">AI Technology Empowerment</h3>
+                        <p class="text-gray-400">Cutting-edge AI technology with native deep integration</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4 text-green-400"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Result Guarantee</h3>
+                        <p class="text-gray-400">Data-driven decisions with predictable outcomes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Traditional Professional Advantages -->
+                <div class="card p-8">
+                    <div class="floating">
+                        <div class="text-5xl mb-6 text-orange-400">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Traditional Professional Moat</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-lightbulb text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Content Strategy Expertise</h4>
+                                <p class="text-sm text-gray-400">15+ years of brand marketing experience with cross-industry strategic planning capabilities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-video text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Content Production Excellence</h4>
+                                <p class="text-sm text-gray-400">Multi-media content production standards with complete production pipeline</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-bullhorn text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Marketing & Distribution Mastery</h4>
+                                <p class="text-sm text-gray-400">Cross-channel media placement strategies with data analysis and optimization experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Technology Advantages -->
+                <div class="card p-8">
+                    <div class="floating" style="animation-delay: 0.5s;">
+                        <div class="text-5xl mb-6 text-blue-400">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI Technology Differentiation</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-magic text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Intelligent Creative Generation</h4>
+                                <p class="text-sm text-gray-400">Brand DNA-based AI creative engine with multi-modal content generation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-cogs text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Smart Production Workflow</h4>
+                                <p class="text-sm text-gray-400">AI-assisted video editing with batch multi-version content generation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-chart-bar text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Intelligent Marketing Decisions</h4>
+                                <p class="text-sm text-gray-400">Real-time data monitoring and analysis with automated campaign strategy optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fusion Innovation Advantages -->
+                <div class="card p-8">
+                    <div class="floating" style="animation-delay: 1s;">
+                        <div class="text-5xl mb-6 text-green-400">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Fusion Innovation Value</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-shield-alt text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Professional + Smart Dual Guarantee</h4>
+                                <p class="text-sm text-gray-400">AI provides efficiency while professionals ensure quality</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-balance-scale text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Perfect Balance of Scale + Customization</h4>
+                                <p class="text-sm text-gray-400">Standardized processes supporting scalable delivery</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                <i class="fas fa-tachometer-alt text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Rapid Response & Iteration</h4>
+                                <p class="text-sm text-gray-400">AI shortens production cycles with real-time data feedback</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases Section -->
+    <section id="cases" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Success Case Studies</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Real project validation with cross-industry success cases demonstrating the unlimited potential of AI-native content marketing
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- Knowledge is Power Case -->
+                <div class="card overflow-hidden">
+                    <div class="case-visual" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="w-full h-full bg-cover bg-center"></div>
+                        <div class="case-overlay">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold mr-3">Knowledge IP</span>
+                                <span class="bg-blue-400 text-white px-3 py-1 rounded-full text-sm">Digital Transformation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">"Knowledge is Power" IP Digital Upgrade</h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400">Project Duration</span>
+                                <span class="text-white font-semibold">6 months</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400">Services Used</span>
+                                <span class="text-white font-semibold">Marketing Brain + Content Factory</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            Benchmark project for traditional popular science magazine brand's digital transformation. Through AI technology, we helped traditional IP achieve youth-oriented upgrade and successfully transform into digital knowledge IP.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-400">5M+</div>
+                                <div class="text-sm text-gray-400">New Followers</div>
+                            </div>
+                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-400">85%</div>
+                                <div class="text-sm text-gray-400">Youth Index Increase</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full py-3 rounded-lg font-bold">View Detailed Case</button>
+                    </div>
+                </div>
+
+                <!-- FENGLL Case -->
+                <div class="card overflow-hidden">
+                    <div class="case-visual" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="w-full h-full bg-cover bg-center"></div>
+                        <div class="case-overlay">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-pink-400 text-black px-3 py-1 rounded-full text-sm font-bold mr-3">Beauty Brand</span>
+                                <span class="bg-purple-400 text-white px-3 py-1 rounded-full text-sm">IP Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">FENGLL Fashion Brand IP Marketing</h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400">Project Duration</span>
+                                <span class="text-white font-semibold">12 months</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-400">Services Used</span>
+                                <span class="text-white font-semibold">Super IP Incubator + Marketing Brain</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-6">
+                            Breakthrough case for emerging beauty brand differentiation. By creating "Miss FENGLL" virtual brand spokesperson, we established unique brand IP and achieved rapid growth.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
+                                <div class="text-2xl font-bold text-pink-400">280%</div>
+                                <div class="text-sm text-gray-400">Sales Growth</div>
+                            </div>
+                            <div class="text-center p-4 bg-black bg-opacity-30 rounded-lg">
+                                <div class="text-2xl font-bold text-pink-400">1:8</div>
+                                <div class="text-sm text-gray-400">Marketing ROI</div>
+                            </div>
+                        </div>
+                        <button class="btn-primary w-full py-3 rounded-lg font-bold">View Detailed Case</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Cases -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <div class="text-3xl mb-4 text-blue-400">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">YueYue Vitality Program</h4>
+                    <p class="text-sm text-gray-300 mb-4">E-commerce platform marketing upgrade project</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">DAU Increase</span>
+                            <span class="text-blue-400 font-bold">150%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">GMV Growth</span>
+                            <span class="text-blue-400 font-bold">300%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <div class="text-3xl mb-4 text-purple-400">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Rising Star Artist IP</h4>
+                    <p class="text-sm text-gray-300 mb-4">Personal IP comprehensive upgrade project</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Fan Growth</span>
+                            <span class="text-purple-400 font-bold">8 Million</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Commercial Value</span>
+                            <span class="text-purple-400 font-bold">500%↑</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-6">
+                    <div class="text-3xl mb-4 text-green-400">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">Traditional Manufacturing</h4>
+                    <p class="text-sm text-gray-300 mb-4">Industrial brand digital marketing transformation</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Online Inquiries</span>
+                            <span class="text-green-400 font-bold">+400%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Cost Reduction</span>
+                            <span class="text-green-400 font-bold">60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Service Pricing System</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Transparent pricing, value-based billing, providing flexible service combination solutions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Smart Content Factory Pricing -->
+                <div class="price-card">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4 text-orange-400"><i class="fas fa-industry"></i></div>
+                        <h3 class="text-2xl font-bold mb-2">Smart Content Factory</h3>
+                        <p class="text-gray-400">AI-driven content production solutions</p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="border-b border-gray-700 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Basic Plan</span>
+                                <span class="text-2xl font-bold text-orange-400">$1,450/mo</span>
+                            </div>
+                            <p class="text-sm text-gray-400">50 videos + 200 images</p>
+                        </div>
+                        
+                        <div class="border-b border-gray-700 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Professional Plan</span>
+                                <span class="text-2xl font-bold text-orange-400">$2,930/mo</span>
+                            </div>
+                            <p class="text-sm text-gray-400">200 videos + 800 images</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Enterprise Plan</span>
+                                <span class="text-2xl font-bold text-orange-400">$5,880/mo</span>
+                            </div>
+                            <p class="text-sm text-gray-400">500 videos + 2000 images</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold mb-4">Choose Plan</button>
+                    <p class="text-center text-sm text-gray-400">10x efficiency, 70% cost reduction</p>
+                </div>
+
+                <!-- Omni-Channel Marketing Brain Pricing -->
+                <div class="price-card featured">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4 text-blue-400"><i class="fas fa-brain"></i></div>
+                        <h3 class="text-2xl font-bold mb-2">Marketing Brain</h3>
+                        <p class="text-gray-400">Intelligent marketing decision system</p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="border-b border-gray-700 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Growth Plan</span>
+                                <span class="text-2xl font-bold text-blue-400">$4,400/mo</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Single flagship product brands</p>
+                        </div>
+                        
+                        <div class="border-b border-gray-700 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Professional Plan</span>
+                                <span class="text-2xl font-bold text-blue-400">$8,850/mo</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Multi-product mature brands</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Enterprise Plan</span>
+                                <span class="text-2xl font-bold text-blue-400">$14,750/mo</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Large enterprise groups</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-gold w-full py-3 rounded-lg font-bold mb-4">Choose Plan</button>
+                    <p class="text-center text-sm text-gray-400">100-200% ROI improvement</p>
+                </div>
+
+                <!-- Super IP Incubator Pricing -->
+                <div class="price-card">
+                    <div class="text-center mb-6">
+                        <div class="text-4xl mb-4 text-yellow-400"><i class="fas fa-star"></i></div>
+                        <h3 class="text-2xl font-bold mb-2">Super IP Incubator</h3>
+                        <p class="text-gray-400">End-to-end IP development service</p>
+                    </div>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="border-b border-gray-700 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Incubation Package</span>
+                                <span class="text-2xl font-bold text-yellow-400">$29,500</span>
+                            </div>
+                            <p class="text-sm text-gray-400">6-month IP 0-to-1 incubation</p>
+                        </div>
+                        
+                        <div class="border-b border-gray-700 pb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Growth Package</span>
+                                <span class="text-2xl font-bold text-yellow-400">$59,000</span>
+                            </div>
+                            <p class="text-sm text-gray-400">12-month operations + commercialization</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-semibold">Super Package</span>
+                                <span class="text-2xl font-bold text-yellow-400">$118,000</span>
+                            </div>
+                            <p class="text-sm text-gray-400">24-month full commercialization</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary w-full py-3 rounded-lg font-bold mb-4">Choose Package</button>
+                    <p class="text-center text-sm text-gray-400">6-month super IP creation</p>
+                </div>
+            </div>
+            
+            <!-- Pricing Guarantee -->
+            <div class="mt-16 text-center">
+                <div class="card p-8 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6">Pricing Guarantee & Support</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-2xl text-green-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Result Guarantee</h4>
+                            <p class="text-sm text-gray-400">No results, full refund within the first 30 days</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-headset text-2xl text-blue-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">24/7 Support</h4>
+                            <p class="text-sm text-gray-400">Dedicated account manager with instant response</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-sync-alt text-2xl text-yellow-400"></i>
+                            </div>
+                            <h4 class="font-bold mb-2">Flexible Scaling</h4>
+                            <p class="text-sm text-gray-400">Upgrade or downgrade plans anytime without penalty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black bg-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">About Nengli Limited</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Pioneering the future of content marketing through the perfect fusion of traditional expertise and AI innovation
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Company Story -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Our Story</h3>
+                    <div class="space-y-6 text-gray-300">
+                        <p>
+                            Founded in 2009, Nengli Limited began as a traditional content marketing agency with a bold vision: to revolutionize how brands connect with their audiences through the power of storytelling and technology.
+                        </p>
+                        <p>
+                            With over 15 years of industry experience, we've evolved from traditional marketing specialists into AI-native content pioneers. Our journey has been marked by continuous innovation, serving 300+ brands across diverse industries and generating over 500 million content views.
+                        </p>
+                        <p>
+                            Today, we stand at the forefront of the AI revolution, combining deep industry expertise with cutting-edge technology to deliver unprecedented marketing solutions that drive real, measurable results for our clients.
+                        </p>
+                    </div>
+
+                    <!-- Key Milestones Timeline -->
+                    <div class="mt-12">
+                        <h4 class="text-xl font-bold mb-6">Key Milestones</h4>
+                        <div class="timeline-container">
+                            <div class="timeline-item">
+                                <div class="timeline-content timeline-left">
+                                    <h5 class="font-bold text-orange-400">2009 - Foundation</h5>
+                                    <p class="text-sm text-gray-400">Established as a boutique content marketing agency</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content timeline-right">
+                                    <h5 class="font-bold text-blue-400">2015 - Digital Transformation</h5>
+                                    <p class="text-sm text-gray-400">Pioneered multi-platform content strategies</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content timeline-left">
+                                    <h5 class="font-bold text-green-400">2020 - AI Integration</h5>
+                                    <p class="text-sm text-gray-400">First AI-powered content generation tools launched</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content timeline-right">
+                                    <h5 class="font-bold text-yellow-400">2023 - AI-Native Evolution</h5>
+                                    <p class="text-sm text-gray-400">Complete platform transformation to AI-native solutions</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content timeline-left">
+                                    <h5 class="font-bold text-purple-400">2025 - Global Expansion</h5>
+                                    <p class="text-sm text-gray-400">International market entry with English services</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Stats & Values -->
+                <div>
+                    <div class="card p-8 mb-8">
+                        <h4 class="text-2xl font-bold mb-6 text-center">Company Statistics</h4>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">300+</div>
+                                <div class="stat-label">Brands Served</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500M+</div>
+                                <div class="stat-label">Content Views</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Team Members</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Support</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="card p-8">
+                        <h4 class="text-2xl font-bold mb-6">Core Values</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <i class="fas fa-lightbulb text-orange-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold mb-1">Innovation First</h5>
+                                    <p class="text-sm text-gray-400">Constantly pushing boundaries with cutting-edge AI technology</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <i class="fas fa-handshake text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold mb-1">Client Success</h5>
+                                    <p class="text-sm text-gray-400">Your success is our success - results-driven approach</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-green-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <i class="fas fa-leaf text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold mb-1">Sustainable Growth</h5>
+                                    <p class="text-sm text-gray-400">Building long-term partnerships for mutual prosperity</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-purple-400 bg-opacity-20 rounded-lg flex items-center justify-center mr-3 mt-1">
+                                    <i class="fas fa-eye text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold mb-1">Transparency</h5>
+                                    <p class="text-sm text-gray-400">Open communication and honest reporting in all interactions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="newsletter-section py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Stay Ahead of the AI Marketing Revolution</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                Get exclusive insights, case studies, and early access to new AI marketing tools. Join 10,000+ marketing professionals already transforming their strategies.
+            </p>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email address" 
+                           class="flex-1 px-6 py-4 rounded-lg text-black font-medium focus:outline-none focus:ring-2 focus:ring-white">
+                    <select class="px-6 py-4 rounded-lg text-black font-medium focus:outline-none focus:ring-2 focus:ring-white">
+                        <option>I'm interested in...</option>
+                        <option>Smart Content Factory</option>
+                        <option>Marketing Brain</option>
+                        <option>Super IP Incubator</option>
+                        <option>All Services</option>
+                    </select>
+                    <button class="bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition">
+                        Subscribe Now
+                    </button>
+                </div>
+                
+                <p class="text-sm mt-4 opacity-80">
+                    By subscribing, you agree to receive marketing emails. Unsubscribe anytime. Privacy policy applies.
+                </p>
+            </div>
+            
+            <!-- Newsletter Benefits -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-chart-line text-2xl mr-3"></i>
+                    <span>Weekly AI Marketing Insights</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-rocket text-2xl mr-3"></i>
+                    <span>Early Access to New Tools</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-users text-2xl mr-3"></i>
+                    <span>Exclusive Community Access</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Get Started Today</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Ready to transform your content marketing with AI? Let's discuss how we can help you achieve unprecedented growth.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="card p-8">
+                        <h3 class="text-2xl font-bold mb-6">Free Strategy Consultation</h3>
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Full Name *</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Email Address *</label>
+                                    <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Company Name</label>
+                                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Phone Number</label>
+                                    <input type="tel" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Service Interest</label>
+                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
+                                    <option>Select a service...</option>
+                                    <option>Smart Content Factory</option>
+                                    <option>Omni-Channel Marketing Brain</option>
+                                    <option>Super IP Incubator</option>
+                                    <option>Combination of Services</option>
+                                    <option>Custom Solution</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Monthly Marketing Budget</label>
+                                <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none">
+                                    <option>Select budget range...</option>
+                                    <option>Under $5,000</option>
+                                    <option>$5,000 - $15,000</option>
+                                    <option>$15,000 - $50,000</option>
+                                    <option>$50,000 - $100,000</option>
+                                    <option>$100,000+</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Tell us about your marketing challenges</label>
+                                <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-orange-400 focus:outline-none" placeholder="Describe your current marketing situation, goals, and how we can help..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-gold w-full py-4 rounded-lg text-lg font-bold">
+                                Get Free Strategy Session
+                            </button>
+                            
+                            <p class="text-xs text-gray-400 text-center">
+                                By submitting this form, you agree to our privacy policy and terms of service.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <div class="contact-item">
+                        <i class="icon fas fa-envelope"></i>
+                        <h4 class="font-bold mb-2">Email Us</h4>
+                        <p class="text-gray-300">hello@nengli.tv</p>
+                        <p class="text-sm text-gray-400">Response within 2 hours</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="icon fas fa-calendar"></i>
+                        <h4 class="font-bold mb-2">Schedule a Call</h4>
+                        <p class="text-gray-300">Book a 30-min consultation</p>
+                        <p class="text-sm text-gray-400">Available slots this week</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="icon fas fa-map-marker-alt"></i>
+                        <h4 class="font-bold mb-2">Visit Us</h4>
+                        <p class="text-gray-300">San Francisco, CA</p>
+                        <p class="text-sm text-gray-400">By appointment only</p>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="contact-item">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex justify-center space-x-4">
+                            <a href="#" class="w-10 h-10 bg-orange-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-linkedin text-orange-400"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-twitter text-blue-400"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-purple-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-instagram text-purple-400"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-red-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                                <i class="fab fa-youtube text-red-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="logo-container mb-6">
+                        <div class="logo-icon">
+                            <span class="logo-symbol">N</span>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-main">NENGLI</div>
+                            <div class="logo-sub">LIMITED</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        AI-Native Content Marketing Pioneer. Transforming brands with the perfect fusion of traditional expertise and cutting-edge AI technology.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 bg-orange-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                            <i class="fab fa-linkedin text-orange-400"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-blue-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                            <i class="fab fa-twitter text-blue-400"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-purple-400 bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-40 transition">
+                            <i class="fab fa-instagram text-purple-400"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-orange-400 transition">Smart Content Factory</a></li>
+                        <li><a href="#services" class="hover:text-orange-400 transition">Marketing Brain</a></li>
+                        <li><a href="#services" class="hover:text-orange-400 transition">Super IP Incubator</a></li>
+                        <li><a href="#pricing" class="hover:text-orange-400 transition">Custom Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-orange-400 transition">About Us</a></li>
+                        <li><a href="#cases" class="hover:text-orange-400 transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">News & Blog</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#contact" class="hover:text-orange-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2025 Nengli Limited. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <span class="text-green-400 text-sm flex items-center">
+                            <i class="fas fa-circle mr-2" style="font-size: 6px;"></i>
+                            All systems operational
+                        </span>
+                        <span class="text-gray-400 text-sm">
+                            Made with ❤️ in San Francisco
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and service cards
+        document.querySelectorAll('.card, .service-card, .status-card').forEach(card => {
+            card.classList.add('fade-in');
+            observer.observe(card);
+        });
+
+        // Add sparkles dynamically
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            
+            document.querySelector('.hero').appendChild(sparkle);
+            
+            // Remove sparkle after animation
+            setTimeout(() => {
+                sparkle.remove();
+            }, 2000);
+        }
+
+        // Create sparkles periodically
+        setInterval(createSparkle, 3000);
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const requiredFields = this.querySelectorAll('[required]');
+            let allValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    allValid = false;
+                    field.style.borderColor = '#ef4444';
+                } else {
+                    field.style.borderColor = '#6b7280';
+                }
+            });
+            
+            if (allValid) {
+                // Show success message
+                alert('Thank you for your interest! We will contact you within 24 hours.');
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Newsletter subscription
+        document.querySelector('.newsletter-section form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (email) {
+                alert('Thank you for subscribing! Check your email for confirmation.');
+                this.reset();
+            }
+        });
+
+        // Add loading states to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.textContent = 'Loading...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.disabled = false;
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
